@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, TextInput  } from "react-native";
+import { StyleSheet, View, Text, TextInput, TouchableOpacity } from "react-native";
 
 const RegistrationScreen = () => {
     
@@ -17,6 +17,10 @@ const RegistrationScreen = () => {
               <TextInput style={styles.input} placeholder="Password" secureTextEntry={true} />
             </View>
           </View>
+
+          <TouchableOpacity style={styles.btn} activeOpacity={0.6}>
+            <Text style={{color:"#ffffff"}}>Sign in</Text>
+          </TouchableOpacity>
         </View>
     );
 };
@@ -28,7 +32,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     // justifyContent:"center",
-    position: 'absolute',
+    // position: 'absolute',
     left: 0,
     top: 263,
     width: "100%",
@@ -59,5 +63,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#e8e8e8",
     borderRadius:8,
+  },
+  btn: {
+    justifyContent: "center",
+    alignItems:"center",
+    height: 50,
+    marginTop:44,
+    color:"#ffffff",
+    backgroundColor: "#ff6c00",
+    borderRadius:100,
   },
 });
